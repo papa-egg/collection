@@ -1,0 +1,6 @@
+@import "reset.css";
+
+.view-port{
+    min-height: 100vh;
+    background: greenyellow;
+}

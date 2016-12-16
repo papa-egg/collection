@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport"  content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>双飞翼布局</title>
+    <link rel="stylesheet" type="text/css" href="../src/css/reset.css">
+    <style type="text/css">
+        .view-port{
+            display: block;
+            overflow: hidden;
+            background: #f3f3f3;
+            font-size: 32px;
+            color: #fff;
+            text-align: center;
+        }
+        .view-port header{
+            height: 100px;
+            background: green;
+            line-height: 100px;
+        }
+        .view-port footer{
+            height: 100px;
+            background: gray;
+            line-height: 100px;
+        }
+        .main{
+            overflow: hidden;
+        }
+        .main > div{
+            min-height: 400px;
+            line-height: 400px;
+            position: relative;
+            float: left;
+        }
+        .center{
+            width: 100%;
+        }
+        .center-content{
+            padding-left: 200px;
+            padding-right: 300px;
+            background: red;
+        }
+        .left{
+            margin-left: -100%;
+            width: 200px;
+            background: darkolivegreen;
+        }
+        .right{
+            margin-left: -300px;
+            width: 300px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="view-port">
+        <header>这是头部</header>
+        <div class="main">
+            <div class="center"><div class="center-content">中部<img style="display: none" src="../src/images/baidu-pic.jpg?type=center"></div></div>
+            <div class="left">左边<img style="display: none" src="../src/images/baidu-pic.jpg?type=left"></div>
+            <div class="right">右边<img style="display: none" src="../src/images/baidu-pic.jpg?type=right"></div>
+        </div>
+        <footer>这是底部</footer>
+    </div>
+
+</body>
+</html>
