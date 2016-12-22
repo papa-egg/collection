@@ -1,0 +1,113 @@
+@charset "utf-8";
+@import "reset.css";
+
+body{
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+    height: 100vh;
+    background: #ffcead;
+}
+.box{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+}
+.ulist{
+    width: 6.2rem;
+    height: 5.85rem;
+    margin: 0 auto;
+    background: url('../images/join-bg.png') no-repeat;
+    background-size: 6.15rem 5.6rem;
+    background-position: 0 .1rem;
+}
+.ulist>li{
+    width: 100%;
+    height: 33.33%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+.ulist>li:nth-of-type(2) {
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    align-items: center;
+    -webkit-align-items: center;
+}
+.item{
+    width: 1.8rem;
+    height: 1.7rem;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.item[class*=not]{
+    opacity: 0.9;
+}
+.item>span{
+    position: absolute;
+    width: 1.28rem;
+    height: 0.52rem;
+    bottom: .22rem;
+    left: 50%;
+    font-weight: bold;
+    margin-left: -0.64rem;
+    color: #fdd18c;
+    background: url('../images/caishen-num.png') no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+}
+.ulist>li .cur{
+    opacity: 1;
+}
+.ulist>li .cur:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url('../images/selected.png') no-repeat;
+    background-size: 100% 100%;
+    z-index: 100;
+}
+.get-1{
+     background-image: url('../images/get-1.png');
+ }
+.get-2{
+    background-image: url('../images/get-2.png');
+}
+.get-3{
+    background-image: url('../images/get-3.png');
+}
+.get-4{
+    background-image: url('../images/get-4.png');
+}
+.get-5{
+    background-image: url('../images/get-5.png');
+}
+.not-1{
+    background-image: url('../images/not-1.png');
+}
+.not-2{
+    background-image: url('../images/not-2.png');
+}
+.not-3{
+    background-image: url('../images/not-3.png');
+}
+.not-4{
+    background-image: url('../images/not-4.png');
+}
+.not-5{
+    background-image: url('../images/not-5.png');
+}
