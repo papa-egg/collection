@@ -91,10 +91,10 @@ function isArray(type) {
 // 经常有人用typeof xxx = 'function'来检测函数，但这涉及类似ie浏览器中存在兼容问题，比如它会返回 object
 // 当然个人来说返回object的确更合情合理，所以最好还是不要用typeof来检测函数function
 function isFunction(type){
-    return Object.prototype.toString.call(type) === 'object Function'
+    return Object.prototype.toString.call(type) === 'object Function';
 }
 // 注：为什么会出现这种混乱的情况？
-// 初期js并没有成长为一门编程语言的报复，可日常函数却是非常多的，要检测一个值是不是一个函数就成了一个非常迫切的问题，于是就给typeof增加了一种状态，当然并不是所有厂商都照做了
+// 初期js并没有成长为一门编程语言的报负，可日常函数却是非常多的，要检测一个值是不是一个函数就成了一个非常迫切的问题，于是就给typeof增加了一种状态，当然并不是所有厂商都照做了
 
 
 // 检测null
@@ -147,4 +147,4 @@ if (Object.keys(mySelf).indexOf('name') > -1) {
 
 
 /********************END WORD**********************/
-// js中dom对象因为各种浏览器实现各有差异，并没有统一标准，所以如果是dom对象以上并不试用
+// js中dom对象因为各种浏览器实现各有差异，并没有统一标准，所以如果是dom对象,以上并不试用
