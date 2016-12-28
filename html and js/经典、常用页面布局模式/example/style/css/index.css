@@ -1,0 +1,100 @@
+@import url(global.css);
+body{ background:#eee; font:12px/1.5 Arial, SimSun, sans-serif;}
+
+
+/***=顶部=***/
+
+.top{ width:100%; background:#f5f5f5;}
+.top .wrap{ height:40px; color:#666; font:12px/40px SimSun;}
+p.welcome{ float:left;}
+a.login{ float:right; color:#666;}
+
+/***=头部=***/
+
+.head{ width:100%; background-color:#54c3a1;}
+.head .wrap{ height:140px; position:relative; background:url(../images/head-bg.jpg) no-repeat right top;}
+.logo{ position:absolute; left:0; top:48px; width:414px; height:51px; background:url(../images/logo.gif) no-repeat;}
+.head h1{ position:absolute; width:176px; height:34px; left:440px; top:56px; background:url(../images/head.png) no-repeat; text-indent:-9999px;}
+
+/***=主体=***/
+
+.main .wrap{ margin-bottom:20px;}
+.main .column{ background-color:#fff; margin-top:10px; padding-bottom:30px; clear:both;}
+.search-box{ width:960px; padding-top:37px; margin:0 auto;}
+.search{ padding-left:237px;}
+.search-box input{ float:left; width:339px; height:42px; background:url(../images/input.gif) no-repeat; border:none; padding-left:15px; font:14px/42px SimSun; overflow:hidden; color:#363636; padding-right:15px;}
+.search-box button{ float:left; border:none; width:56px; height:42px; background:url(../images/button.gif) no-repeat; cursor:pointer;}
+a.senior-ser{ float:left; margin-left:15px; font:12px/42px SimSun; color:#835f53;}
+a.senior-ser:hover{ text-decoration:underline;}
+.keywords span{ font:12px/30px SimSun; color:#c8bbaf; float:left; margin-right:10px;}
+.keywords .orange{ color:#f28e78;}
+.choose{ border-top:1px solid #e5e5e5; border-left:1px solid #e5e5e5;}
+.choose dt,.choose dd{ float:left; border-right:1px solid #e5e5e5; border-bottom:1px solid #e5e5e5; height:40px; font:13px/40px SimSun;}
+.choose dt{ width:97px; text-align:center;}
+.choose dd{ width:860px; position:relative;}
+.choose dd span{ float:left; line-height:24px; height:22px; padding:0 13px; margin-left:15px; margin-top:10px; cursor:pointer;}
+.choose dd span.cur{ color:#fff; background-color:#54c3a1;}
+.unfold{ float:right !important; color:#c3c3c3 !important; padding:0 18px 0 0 !important; background:url(../images/unflod.gif) no-repeat right center; margin-right:10px;}
+
+.static{ padding-top:40px; width:940px; margin:0 auto; overflow:hidden;}
+.stc-top{ position:relative; padding-bottom:20px; border-bottom:1px dashed #d6d6d6;}
+.count{ padding-left:15px;}
+.count li{ float:left; width:135px; height:42px; padding-left:50px; background:url(../images/count-bg.png) no-repeat;}
+.count li p{ font:12px/25px SimSun; color:#444;}
+.count li span{ font:14px/100% 'Microsoft YaHei'; color:#54c3a1;}
+.count li.ct-2{ background-position:0 -42px;}
+.count li.ct-3{ background-position:0 -84px;}
+.count li.ct-4{ background-position:0 -126px;}
+a.upload{ position:absolute; width:114px; padding-left:76px; height:40px; background:url(../images/upload.gif) no-repeat; right:0; top:0; font:15px/40px 'Microsoft YaHei'; color:#fff;}
+.upd-con{ margin-top:25px; overflow:hidden; height:42px; position:relative;}
+.upd-con ul{ width:1050px; position:relative;}
+.upd-con li{ height:42px;}
+.work{ float:left; padding-left:10px; width:290px; border-right:1px solid #e6e6e6; margin-right:25px;}
+.work img{ float:left; padding-right:10px;}
+.work p{ overflow:hidden; font:12px/20px SimSun; color:#a6a6a6;}
+.work p a{ color:#000;}
+.mod{ border:1px solid #666; padding:5px;}
+
+.course-choise{ padding:15px 0 10px 20px; border-bottom:1px solid #e6e6e6;}
+.newest{ float:left; padding-left:30px; background:url(../images/news.gif) no-repeat left center; font:14px/22px SimSun; color:#424242;}
+.class{ float:right; margin-right:10px;}
+.class span{ float:right; display:block; padding:0 9px; font:12px/20px SimSun; color:#a6a6a6;}
+.class span.cur{ color:#fff; background-color:#54c3a1; cursor:pointer; margin-right:10px;}
+.class-con{ padding:20px 20px 0 20px;}
+.book{ width:200px; height:248px; float:left; background-color:#9ecdcd; position:relative;}
+.book h4{ font:40px/44px 'Arial'; color:#fff; padding:30px 0 0 30px; vertical-align:middle; float:left;}
+.book span{ position:absolute; left:30px; bottom:30px; padding-left:20px; background:url(../images/sum.png) no-repeat left center; font:12px/20px SimSun; color:#fff;}
+.book-list{ float:left; width:760px; margin-top:-10px;}
+.book-list li{ float:left; width:320px; font:12px/36px SimSun; border-bottom:1px dashed #e5e5e5; margin-left:40px;}
+.book-list li i{ float:left; width:16px; height:16px; background:url(../images/btn_class.gif) no-repeat; margin:12px 5px 0 0;}
+.book-list li em{ float:left;}
+.book-list li span{ float:right; color:#c7baae;}
+.book-list li i.i-2{ background-position:0 -16px;}
+.book-list li i.i-3{ background-position:0 -32px;}
+.book-list li i.i-4{ background-position:0 -48px;}
+.book-list li i.i-5{ background-position:0 -64px;}
+
+.sup-user{ height:57px; padding:0 20px; background-color:#f8f9fa; border-bottom:1px solid #e7e3e4; position:relative;}
+.sup-user h4{ float:left; font:16px/34px 'Microsoft YaHei'; color:#424242; margin-top:21px; font-weight:bold; border-bottom:3px solid #19a97b; padding:0 20px;}
+.swit-btn{ float:right; margin-top:30px; height:18px; margin-top:30px;}
+.swit-btn a{ float:right; width:18px; height:18px;}
+.swit-btn a.next{ background:url(../images/next.gif) no-repeat;}
+.swit-btn a.prev{ background:url(../images/prev.gif) no-repeat;}
+.swit-cur{ float:right; margin:0 2px;}
+.swit-cur span{ width:7px; height:7px; background:url(../images/btn_cur.gif) no-repeat right top; display:inline-block; margin:0 3px; vertical-align:middle;}
+.swit-cur span.cur{ background-position:left top;}
+.user{ width:934px; margin:30px auto 0; height:130px; overflow:hidden; position:relative;}
+.user ul{ position:absolute; left:0; top:0;}
+.user li{ float:left; width:80px; margin-right:42px;}
+.user li img{ display:block;}
+.user li p{ text-align:center; font:12px/100% SimSun; color:#c7baae;}
+.user li p.name{ font:14px/30px SimSun; color:#000;}
+.user li p span.user-num{ color:#ff6b49; margin-left:5px;}
+
+/***=底部=***/
+
+.footer{ width:100%; background-color:#a7bab4;}
+.footer .wrap{ height:68px; text-align:center; font:12px/68px SimSun; color:#fff;}
+
+
+
