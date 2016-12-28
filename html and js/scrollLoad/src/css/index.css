@@ -1,0 +1,10 @@
+@import "reset.css";
+
+.ulist{
+
+}
+.ulist>li{
+    height: 50px;
+    background: red;
+    margin-bottom: 10px;
+}

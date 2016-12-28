@@ -1,11 +1,37 @@
-/******=base on ES5=*******/
+/*****=base on ES5=*******/
+
+
+/*/!*!
+ * 刷脸app分享控制
+ * @param value {string}
+ * @author Le_cuer
+ * @example:
+ sole('这是信息!')
+ *!/
+function startShare(shopName, shareUrl) {
+
+    var title=getIconCopy(true);
+    var desc="我是"+ (shopName || '老板') +"，我的福气与你同享",
+        pic= _shareConfig.shareLinkDoMain + imgresourcePath + "activity/img/wx.png",
+        shareInfo = _shareConfig.shareLinkDoMain + shareUrl;
+    if (pic.indexOf('http') === -1) {
+        pic = 'http://' + pic;
+    }
+
+    var type = '1212';
+    window.getshareinfo = function(){
+        return '{\"title\":\"'+ title +'\",\"desc\":\"'+desc+'\",\"thumburl\":\"'+pic+'\",\"sharelink\":\"'+shareInfo+'\",\"type\":\"'+ type +'\"}';
+    };
+    console.log(getshareinfo());
+
+}*/
 
 /***********************************分割线*************************************/
 
 /*!
  * console.log简化
- * @param {String} value
- * @author Sun
+ * @param value {string}
+ * @author Le_cuer
  * @example:
  sole('这是信息!')
  */
@@ -15,10 +41,10 @@ function sole(value) {
 
 /*!
  * extend-简易-浅拷贝
- * @param {Object} target
- * @param {Object} source
- * @return {Object}
- * @author Sun
+ * @param target  {object}
+ * @param source  {object}
+ * @return {object}
+ * @author Le_cuer
  * @example:
  Object.extend(object1, object2)
  */
@@ -38,8 +64,8 @@ Object.extend = function(target, source) {
 /*!
  * 获取url参数
  * 默认为当前页面url地址
- * @param {String} url
- * @return {Object}
+ * @param {string} url
+ * @return {object}
  * @author Sun
  * @example:
  getQueryRequestObjs('xxx.html?name=Sun').name => Sun
@@ -61,10 +87,10 @@ function getQueryRequestObjs(url) {
 }
 
 /*!
- * 检测是否是当前对象是否是函数
- * @param {Object} fn
+ * 检测是否是当前对象是否是函数functin
+ * @param fn {object}
  * @return {boolean}
- * @author Sun
+ * @author Le_cuer
  * @example:
  isFunction(function() {}) => true
  */
@@ -74,12 +100,12 @@ function isFunction(fn) {
 
 /*!
  * AJAX原生调用封装方法
- * @param {String} url
- * @param {Function} success
- * @param {Object} data
- * @param {Function} error
- * @param {Boolean} asyne
- * @author Sun
+ * @param url {string}
+ * @param success {function}
+ * @param data {object}
+ * @param error {function}
+ * @param asyne {boolean}
+ * @author Le_cuer
  * @example:
  ajaxRequest('/api/list', function(data) {
     console.log(data);
@@ -87,9 +113,9 @@ function isFunction(fn) {
  */
 function ajaxRequest(url, success, data, error, async) {
     var  xhr   = new XMLHttpRequest();
-    var sendData = '';
 
     if (data) {
+        var sendData = '';
         Object.keys(data).forEach(function(item, index) {
             if (index == 0) {
                 sendData += item + '=' + data[item];
@@ -104,7 +130,7 @@ function ajaxRequest(url, success, data, error, async) {
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
     xhr.send(sendData);
 
-    if (Boolean(async)) {
+    if (!!async) {
         success(JSON.parse(xhr.responseText));
     }
     else {
@@ -118,7 +144,7 @@ function ajaxRequest(url, success, data, error, async) {
                         error();
                     }
                     else {
-                        console.error('ajaxGetRequest 请求失败！ 错误代号：' + xhr.status);
+                        console.error('ajaxRequest 请求失败！ 错误代号：' + xhr.status);
                     }
                 }
             }
@@ -128,9 +154,9 @@ function ajaxRequest(url, success, data, error, async) {
 
 /*!
  * append底部添加节点
- * @param {String or node} parentItem
- * @param {String or node} childItem
- * @author Sun
+ * @param parentItem {string or node}
+ * @param childItem {string or node}
+ * @author Le_cuer
  * @example:
  appendItem('.la', '<p>123</p>');
  */
@@ -170,40 +196,10 @@ function appendItem(parentItem, childItem) {
 }
 
 /*!
- * 手机号格式验证-基于dialog插件
- * @param {String} telnumber
- * @return {boolean}
- * @author Sun
- * @example:
- if (checkPhone(phone))
- console.log('手机格式正确！');
- */
-function checkPhone(phone) {
-    if((/^1[34578]\d{9}$/.test(phone))){
-        return true;
-    }
-    else if (phone == ''){
-        $dialog.init({
-            content: '手机号不能为空',
-            cancel: function(){},
-            cancelText: '确定'
-        });
-    }
-    else {
-        $dialog.init({
-            content: '手机号输入格式不正确',
-            cancel: function(){},
-            cancelText: '确定'
-        });
-    }
-    return false;
-}
-
-/*!
  * ES5高级选择器
- * @param {String} context
+ * @param context {string}
  * @return {DOM}
- * @author Sun
+ * @author Le_cuer
  * @example:
  querySelectorAll('.ulist li');
  */
@@ -230,7 +226,7 @@ function querySelectorAll(context) {
 /*!
  * 判断是否在微信内
  * @return {Boolean}
- * @author Sun
+ * @author Le_cuer
  * @example:
  if (verdictWeixin) alert(true);
  */
@@ -252,7 +248,7 @@ function isInWeixin() {
 /*!
  * 判断是当前环境是ios还是android
  * @return {Boolean}
- * @author Sun
+ * @author Le_cuer
  * @example:
  if (verdictWeixin) alert(true);
  */
@@ -277,10 +273,10 @@ function isInIos() {
 
 /*!
  * 生成随机数
- * @param {Number} maxNum
- * @param {Number} startNum
+ * @param maxNum {number}
+ * @param startNum {number}
  * @return {number}
- * @author Sun
+ * @author Le_cuer
  * @example:
  getRandomNumber(10, 1); => 1-10随机数
  */
@@ -294,9 +290,10 @@ function getRandomNumber(maxNum, startNum) {
 
 /*!
  * 委托点击事件-解决日常绑定点击带来的杂乱和性能开销
- * @param {String} hook
- * @param {Function} emit
- * @author Sun
+ * @param hook {string}
+ * @param emit {function}
+ * @return null
+ * @author Le_cuer
  * @example:
  addClickEvent('.la', function() { doSomething })
  */
@@ -327,8 +324,8 @@ var addClickEvent = function() {
 
 /*!
  * toast提示弹框,无需添加样式
- * @param {String} value
- * @author Sun
+ * @param value {string}
+ * @author Le_cuer
  * @example:
  toast('已过期');
  */
@@ -345,12 +342,13 @@ var toast = function(value) {
             display: 'none'
         },
         M_toastSpanStyle = {
-            padding: '.4rem .6rem',
+            padding: '20px 16px',
             textAlign: 'center',
             borderRadius: '5px',
-            background: 'rgba(0,0,0,.7)',
+            background: 'rgba(0,0,0,.8)',
+            background: '-webkit-rgba(0,0,0,.8)',
             color: '#fff',
-            fontSize: '.52rem'
+            fontSize: '16px'
         };
 
     M_toast.className = 'M_toast';
@@ -380,4 +378,26 @@ var toast = function(value) {
         })
     }
 }();
+
+/*!
+ * 手机号格式验证-基于toast插件
+ * @param telnumber {string}
+ * @return {boolean}
+ * @author Le_cuer
+ * @example:
+ if (checkPhone(phone))
+ console.log('手机格式正确！');
+ */
+function checkPhone(phone) {
+    if((/^1[34578]\d{9}$/.test(phone))){
+        return true;
+    }
+    else if (phone == ''){
+        toast('手机号不能为空');
+    }
+    else {
+        toast('手机号输入格式不正确');
+    }
+    return false;
+}
 
